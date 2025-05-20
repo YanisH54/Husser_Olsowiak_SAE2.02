@@ -10,7 +10,7 @@ public class GrapheListe implements Graphe {
         this.adjacence = new ArrayList<>();
     }
 
-    private int getIndice(String n) {
+    public int getIndice(String n) {
         return this.noeuds.indexOf(n);
     }
 
