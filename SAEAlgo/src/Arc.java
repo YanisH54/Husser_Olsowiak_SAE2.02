@@ -11,7 +11,11 @@ public class Arc {
         return destination;
     }
 
-    public int getCout() {
+    public double getCout() {
         return cout;
+    }
+
+    public String toString(){
+        return this.destination+ "(" + this.cout + ")";
     }
 }

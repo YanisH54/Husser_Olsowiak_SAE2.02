@@ -41,14 +41,14 @@ public class GrapheListe implements Graphe {
     }
 
     public String toString() {
-        StringBuilder res = new StringBuilder();
+        StringBuilder chaine = new StringBuilder();
         for (int i = 0; i < this.noeuds.size(); i++) {
-            res.append(this.noeuds.get(i)).append(" -> ");
+            chaine.append(this.noeuds.get(i)).append(" -> ");
             for (Arc a : this.adjacence.get(i).getArcs()) {
-                res.append(a.toString()).append(" ");
+                chaine.append(a.toString()).append(" ");
             }
-            res.append("\n");
+            chaine.append("\n");
         }
-        return res.toString();
+        return chaine.toString();
     }
 }
