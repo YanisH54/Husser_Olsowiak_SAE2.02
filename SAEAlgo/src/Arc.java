@@ -1,8 +1,8 @@
 public class Arc {
     private String destination;
-    private int cout;
+    private double cout;
 
-    public Arc(String dest, int cout){
+    public Arc(String dest, double cout){
         this.destination = dest;
         this.cout = cout;
     }
