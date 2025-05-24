@@ -1,4 +1,12 @@
+/**
+ * Classe de principale
+ */
 public class Main {
+
+    /**
+     * Méthode principale.
+     * @param args
+     */
     public static void main(String[] args) {
         GrapheListe g = new GrapheListe();
 
