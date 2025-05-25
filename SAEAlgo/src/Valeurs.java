@@ -93,4 +93,27 @@ public class Valeurs {
         return res;
 
     }
+
+    /**
+     * Retourne le plus court chemin depuis le noeud de départ jusqu'au noeud destination,
+     * sous forme de liste de noms de noeuds (du départ à la destination).
+     * @param destination le nom du noeud d'arrivée
+     * @return une liste ordonnée de noeuds représentant le chemin
+     */
+    public List<String> calculerChemin(String destination){
+        List<String> chemin = new ArrayList<>();
+        String courant = destination;
+
+        while (courant != null) {
+            chemin.add(courant);
+            courant = this.getParent(courant);
+        }
+
+        List<String> cheminInverse = new ArrayList<>();
+        for (int i = chemin.size() - 1; i >= 0; i--) {
+            cheminInverse.add(chemin.get(i));
+        }
+
+        return cheminInverse;
+    }
 }
