@@ -22,5 +22,6 @@ public class MainDijkstra {
         Valeurs resultats = algo.resoudre(g, "A");
 
         System.out.println(resultats);
+        System.out.println(resultats.calculerChemin("D"));
     }
 }
