@@ -1,8 +1,42 @@
-import java.util.List;
 /**
  * Classe appliquant l'algorithme du point fixe (Bellman-Ford) sur un graphe g.
  */
 public class BellmanFord {
+
+    // Algorithme utilisé
+    /*
+    fonction pointFixe(Graphe g, Noeud depart):
+    debut
+        liste <- g.listeNoeuds()
+        taille <- liste.size()
+
+        pour i de 0 à taille - 1 faire
+            X <- liste[i]
+            L(X) <- +infini
+        fpour
+
+        L(depart) <- 0
+
+        changement <- vrai
+        tant que changement = vrai faire
+            changement <- faux
+            pour i de 0 à taille - 1 faire
+                X <- liste[i]
+                arcs <- g.suivants(X)
+                pour j de 0 à arcs.size() - 1 faire
+                    arc <- arcs[j]
+                    Y <- arc.getDestination()
+                    cout <- arc.getCout()
+                    si L(X) + cout < L(Y) alors
+                        L(Y) <- L(X) + cout
+                        parent(Y) <- X
+                        changement <- vrai
+                    fsi
+                fpour
+            fpour
+        ftant
+    fin
+    */
 
     /**
      * Applique l'algorithme du point fixe (Bellman-Ford) sur le graphe g
@@ -44,7 +78,6 @@ public class BellmanFord {
                 }
             }
         }
-
         return v;
     }
 }

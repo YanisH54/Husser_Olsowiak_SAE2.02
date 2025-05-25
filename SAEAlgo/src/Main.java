@@ -22,6 +22,7 @@ public class Main {
         // Main réalisé pour la section 2
         // System.out.println(g);
 
+        // Main réalisé pour la section 3
         BellmanFord algo = new BellmanFord();
         Valeurs resultats = algo.resoudre(g, "A");
 
