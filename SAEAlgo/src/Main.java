@@ -8,6 +8,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        // Graphe fournis dans le sujet commun à tous les mains.
         GrapheListe g = new GrapheListe();
 
         g.ajouterArc("A", "B", 12);
@@ -18,6 +19,12 @@ public class Main {
         g.ajouterArc("D", "C", 10);
         g.ajouterArc("E", "D", 43);
 
-        System.out.println(g);
+        // Main réalisé pour la section 2
+        // System.out.println(g);
+
+        BellmanFord algo = new BellmanFord();
+        Valeurs resultats = algo.resoudre(g, "A");
+
+        System.out.println(resultats);
     }
 }
