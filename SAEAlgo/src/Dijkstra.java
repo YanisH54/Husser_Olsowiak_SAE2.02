@@ -66,7 +66,6 @@ public class Dijkstra {
                     u = s;
                 }
             }
-
             Q.remove(u);
 
             for (Arc arc : g.suivants(u)) {

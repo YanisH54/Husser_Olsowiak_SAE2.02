@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * Représente un graphe orienté où chaque noeud est identifié par une chaîne de caractères.
@@ -15,6 +18,29 @@ public class GrapheListe implements Graphe {
     public GrapheListe() {
         this.noeuds = new ArrayList<>();
         this.adjacence = new ArrayList<>();
+    }
+
+    /**
+     * Crée un graphe à partir d'un fichier texte.
+     * @param nomFichier le nom du fichier utilisé
+     */
+    public GrapheListe(String nomFichier) throws IOException {
+        this.noeuds = new ArrayList<String>();
+        this.adjacence = new ArrayList<Arcs>();
+
+        BufferedReader br = new BufferedReader(new FileReader(nomFichier));
+        String ligne;
+
+        while ((ligne = br.readLine()) != null) {
+            String[] tab = ligne.split("\t");
+            if (tab.length == 3) {
+                String depart = tab[0];
+                String destination = tab[1];
+                double cout = Double.parseDouble(tab[2]);
+                ajouterArc(depart, destination, cout);
+            }
+        }
+        br.close();
     }
 
     /**
