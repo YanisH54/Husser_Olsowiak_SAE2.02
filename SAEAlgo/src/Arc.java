@@ -5,13 +5,15 @@
 public class Arc {
     private String dest;
     private double cout;
+    String ligne;
 
     /**
      * Crée un nouvel arc avec une destination et un coût.
      */
-    public Arc(String dest, double cout){
+    public Arc(String dest, double cout, String ligne){
         this.dest = dest;
         this.cout = cout;
+        this.ligne = ligne;
     }
 
     /**

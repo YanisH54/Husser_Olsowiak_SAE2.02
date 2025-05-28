@@ -70,7 +70,32 @@ public class GrapheListe implements Graphe {
         }
 
         int i = getIndice(depart);
-        this.adjacence.get(i).ajouterArc(new Arc(destination, cout));
+        // On modifie cet ajout pour l'adapter à l'ajout des lignes
+        this.adjacence.get(i).ajouterArc(new Arc(destination, cout, "1"));
+    }
+
+    /**
+     * Ajoute un arc partant d'un noeud vers un autre avec un coût donné
+     * ainsi qu'une ligne de métro donnée.
+     * Si les noeuds n'existent pas encore, ils sont ajoutés automatiquement.
+     * @param depart le nom du noeud de départ
+     * @param destination le nom du noeud d'arrivée
+     * @param cout le coût de l'arc
+     * @param ligne la ligne de métro
+     */
+    public void ajouterArc(String depart, String destination, double cout, String ligne) {
+        if (!this.noeuds.contains(depart)) {
+            this.noeuds.add(depart);
+            this.adjacence.add(new Arcs());
+        }
+        if (!this.noeuds.contains(destination)) {
+            this.noeuds.add(destination);
+            this.adjacence.add(new Arcs());
+        }
+
+        int i = getIndice(depart);
+        // On modifie cet ajout pour l'adapter à l'ajout des lignes
+        this.adjacence.get(i).ajouterArc(new Arc(destination, cout, ligne));
     }
 
     /**
