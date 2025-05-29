@@ -29,7 +29,15 @@ public class Arc {
      * @return le coût associé à l’arc
      */
     public double getCout() {
-        return cout;
+        return this.cout;
+    }
+
+    /**
+     * Donne le ligne emprunté par l'arc.
+     * @return le coût associé à l’arc
+     */
+    public String getLigne() {
+        return this.ligne;
     }
 
     /**
