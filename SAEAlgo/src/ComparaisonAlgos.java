@@ -1,4 +1,11 @@
+/**
+ * Classe servant à la comparaison des deux algorithmes de chemin le plus court.
+ */
 public class ComparaisonAlgos {
+    /**
+     * Méthode de lancement du main
+     * @param args
+     */
     public static void main(String[] args) {
         String[] fichiers = {
                 "graphes/graphe_10.txt",

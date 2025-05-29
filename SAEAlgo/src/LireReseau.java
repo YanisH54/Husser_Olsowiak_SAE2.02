@@ -1,7 +1,18 @@
 import java.io.*;
 
+/**
+ * Classe pour lire un fichier réseau et construire un graphe.
+ */
 public class LireReseau {
-
+    /**
+     * Lit un fichier de plan réseau et crée un graphe orienté pondéré.
+     * Le fichier doit contenir une section "%% Connexions:" suivie de lignes au format :
+     * depart:arrivee:temps:ligne
+     *
+     * @param nomFichier chemin du fichier à lire
+     * @return le graphe construit
+     * @throws IOException si le fichier est introuvable ou invalide
+     */
     public static GrapheListe lire(String nomFichier) throws IOException {
         GrapheListe graphe = new GrapheListe();
         BufferedReader br = new BufferedReader(new FileReader(nomFichier));
