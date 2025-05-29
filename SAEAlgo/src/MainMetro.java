@@ -36,7 +36,7 @@ public class MainMetro {
             Dijkstra dijkstra = new Dijkstra();
             // Lancement de la mesure
             long debutD = System.nanoTime();
-            Valeurs vD = dijkstra.resoudre(graphe, depart);
+            Valeurs vD = dijkstra.resoudre2(graphe, depart);
             List<String> cheminD = vD.calculerChemin(arrivee);
             System.out.println(cheminD);
             long finD = System.nanoTime(); // Fin de la mesure
@@ -47,7 +47,7 @@ public class MainMetro {
             BellmanFord bellman = new BellmanFord();
             // Lancement de la mesure
             long debutB = System.nanoTime();
-            Valeurs vB = bellman.resoudre(graphe, depart);
+            Valeurs vB = bellman.resoudre2(graphe, depart);
             List<String> cheminB = vB.calculerChemin(arrivee);
             System.out.println(cheminB);
             long finB = System.nanoTime(); // Fin de la mesure

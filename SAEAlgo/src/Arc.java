@@ -42,7 +42,7 @@ public class Arc {
 
     /**
      * Affiche l’arc sous la forme "destination(coût)".
-     * @return une chaîne représentant l’arc
+     * @return une chaîne représentant l’arc²
      */
     public String toString(){
         return this.dest + "(" + this.cout + ")";
