@@ -1,2 +1,4 @@
-# Husser_Olsowiak_SAE2.02
-SAE algorithmique 
+Binôme: 
+Husser Yanis
+Olsozwiak-Delandre Mathéo
+Groupe E
